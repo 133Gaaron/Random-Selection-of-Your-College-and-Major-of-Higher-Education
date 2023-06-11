@@ -150,58 +150,59 @@ while True: # 选取院校所在地及具体院校
     if i == "2":
         continue
         time.sleep(2)
-    print("")
+    break
 
-    while True: # 发送录取邮件
-        f = input("我校会将录取邮件发送至您的个人邮箱内，请输入您的邮箱地址：")
-        time.sleep(1)
-        if f == "":
-            print("输入不能为空，请重新输入！")
-            time.sleep(2)
-            continue
-        g = input("请再次输入相同的邮箱地址进行确认：")
-        time.sleep(1)
-        if g == "":
-            print("输入不能为空，请重新输入！")
-            time.sleep(2)
-            continue
-        if g != f:
-            print("您两次输入的内容不一致，请检查您的邮箱地址，并重新输入！")
-            time.sleep(2)
-            continue
-        break
+print("")
 
-    print("……")
+while True: # 发送录取邮件
+    f = input("我校会将录取邮件发送至您的个人邮箱内，请输入您的邮箱地址：")
     time.sleep(1)
-    print(f"正在向：{g}发送录取邮件……请稍候……")
+    if f == "":
+        print("输入不能为空，请重新输入！")
+        time.sleep(2)
+        continue
+    g = input("请再次输入相同的邮箱地址进行确认：")
     time.sleep(1)
-    print("……")
-    time.sleep(2)
-    print("邮件发送成功！请按照邮件内的说明进行新生确认操作！")
-    time.sleep(2)
-    print("……后续相关信息将及时发送至您的邮箱，请注意查收！")
-    time.sleep(2)
-    print("")
+    if g == "":
+        print("输入不能为空，请重新输入！")
+        time.sleep(2)
+        continue
+    if g != f:
+        print("您两次输入的内容不一致，请检查您的邮箱地址，并重新输入！")
+        time.sleep(2)
+        continue
+    break
+
+print("……")
+time.sleep(1)
+print(f"正在向：{g}发送录取邮件……请稍候……")
+time.sleep(1)
+print("……")
+time.sleep(2)
+print("邮件发送成功！请按照邮件内的说明进行新生确认操作！")
+time.sleep(2)
+print("……后续相关信息将及时发送至您的邮箱，请注意查收！")
+time.sleep(2)
+print("")
     
-    while True: # 选择信息汇总报告
-        j = input("请问您是否需要信息汇总报告？")
-        time.sleep(1)
-        if j == "是":
-            if a == "否":
-                print(f"您的幸运数字为：0；录取专业为：{dic1[b]}；院校地区为：{dic2[d]}；录取院校为：{e}！")
-                break
-            else:
-                print(f"您的幸运数字为：{b}；录取专业为：{dic1[b]}；院校地区为：{dic2[d]}；录取院校为：{e}！")
-                break
-        elif j == "否":
-            print(f"好的，感谢您选择：{e}！")
+while True: # 选择信息汇总报告
+    j = input("请问您是否需要信息汇总报告？")
+    time.sleep(1)
+    if j == "是":
+        if a == "否":
+            print(f"您的幸运数字为：0；录取专业为：{dic1[b]}；院校地区为：{dic2[d]}；录取院校为：{e}！")
             break
         else:
-            print("您未输入正确的格式，请重新输入！")
-            time.sleep(1)
-            continue
+            print(f"您的幸运数字为：{b}；录取专业为：{dic1[b]}；院校地区为：{dic2[d]}；录取院校为：{e}！")
+            break
+    elif j == "否":
+        print(f"好的，感谢您选择：{e}！")
+        break
+    else:
+        print("您未输入正确的格式，请重新输入！")
+        time.sleep(1)
+        continue
 
-    print("")
-    time.sleep(2)
-    print(f"祝您接下来在：{e}的几年，能不断奋进，为自己的未来打下坚实的基础！")
-    break
+print("")
+time.sleep(2)
+print(f"祝您接下来在：{e}的几年，能不断奋进，为自己的未来打下坚实的基础！")
